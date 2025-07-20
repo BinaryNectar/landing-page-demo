@@ -1,0 +1,108 @@
+:root {
+  --bg-light: #f8f9fa;
+  --bg-dark: #212529;
+  --text-light: #212529;
+  --text-dark: #f8f9fa;
+}
+/* Loader Overlay */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+#loader.hidden {
+  display: none;
+}
+body.light-mode {
+  background: var(--bg-light);
+  color: var(--text-light);
+}
+body.light-mode .toggle-switch .form-check-label {
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 1);
+}
+body.dark-mode {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+body.dark-mode .toggle-switch .form-check-label {
+  font-weight: bold;
+  color: black;
+
+  text-shadow: 0 0 5px rgba(255, 255, 255, 1);
+}
+/* make the switch knob & track black when checked */
+.form-check-input:checked {
+  background-color: #000 !important;
+  border-color: whitesmoke !important;
+}
+.form-check-input:checked:focus,
+.form-check-input:checked:active {
+  box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.25) !important;
+}
+/* Modal styling for dark mode */
+body.dark-mode .modal-content {
+  background-color: var(--bg-dark) !important;
+  color: var(--text-dark) !important;
+}
+body.dark-mode .modal-header,
+body.dark-mode .modal-body,
+body.dark-mode .modal-footer {
+  background-color: var(--bg-dark) !important;
+  color: var(--text-dark) !important;
+  border-color: #444 !important;
+}
+/* Invert close icon color in dark mode */
+body.dark-mode .btn-close {
+  filter: invert(1) !important;
+}
+/* Parallax Sections */
+.parallax {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* fallback background color */
+  background-color: #333;
+  height: 100vh;
+}
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+.hero h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+/* Carousel Images Uniform Height */
+.carousel-item img {
+  height: 500px; /* set desired uniform height */
+  object-fit: cover; /* preserve aspect ratio and crop overflow */
+}
+.toggle-switch {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+/* Custom Button */
+.custom-btn {
+  border-radius: 2rem;
+  padding: 0.75rem 1.5rem;
+}
+/* Feature Cards */
+.feature-card {
+  transition: transform 0.3s;
+}
+.feature-card:hover {
+  transform: scale(1.05);
+}
