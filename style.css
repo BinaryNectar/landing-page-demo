@@ -2,7 +2,10 @@
   --bg-light: #f8f9fa;
   --bg-dark: #212529;
   --text-light: #212529;
-  --text-dark: #f8f9fa;
+  --text-dark: hsl(210, 17%, 98%);
+}
+html {
+  scrollbar-gutter: stable;
 }
 /* Loader Overlay */
 #loader {
@@ -105,4 +108,8 @@ body.dark-mode .btn-close {
 }
 .feature-card:hover {
   transform: scale(1.05);
+}
+/* Place this after bootstrap.css */
+body.modal-open {
+  padding-right: 0 !important;
 }
